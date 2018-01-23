@@ -42,7 +42,13 @@ mControlServer.prototype.on = function(handler, callback)
 mControlServer.prototype._handleRequest = function(req, connection) 
 {
     if (req && req["mctrlmessage"] && req["mctrlmessage"]["request"] && this._onRequestCallback)
+    {
+        //fix parsing single param or param array issue
+        if (!Array.isArray(req["mctrlmessage"]["request"]["param"]))
+            req["mctrlmessage"]["request"]["param"] = [req["mctrlmessage"]["request"]["param"]];
+
         this._onRequestCallback(req["mctrlmessage"]["request"], new mControlResponse(connection));
+    }
 }
 mControlServer.prototype.start = function(callback) 
 {

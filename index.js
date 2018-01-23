@@ -13,18 +13,21 @@ server.on("request", function(req, res) {
 
     if (req.name == "ExecuteCommand")
     {
-        if (req.param.name == "command" && req.param.value)
+        for (var p in req.param)
         {
-            var vp = req.param.value.split(".");
-            //value is {group}.{name}.{function}
-            if (vp.length == 3)
+            if (req.param[p].name == "command" && req.param[p].value)
             {
-                var device = vp[0]+"."+vp[1];
-                var command = vp[2];
+                var vp = req.param[p].value.split(".");
+                //value is {group}.{name}.{function}
+                if (vp.length == 3)
+                {
+                    var device = vp[0]+"."+vp[1];
+                    var command = vp[2];
 
-                //change state of sample device
-                devices[device] = command;
-                console.log("execute command: "+device+" -> "+command);
+                    //change state of sample device
+                    devices[device] = command;
+                    console.log("execute command: "+device+" -> "+command);
+                }
             }
         }
 
