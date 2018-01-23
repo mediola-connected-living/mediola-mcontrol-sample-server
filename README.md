@@ -1,1 +1,34 @@
-# mediola-mcontrol-sample-server
+# mediola mControl node.js sample server
+
+A simplified node.js implementation of the mediola mControl server protocol.
+
+
+## Running Locally
+
+Make sure you have [Node.js](http://nodejs.org/) installed.
+
+```sh
+git clone git@github.com:mediola-connected-living/node-js-mcontrol-sample-server.git # or clone your own fork
+cd node-js-mcontrol-sample-server
+npm install
+npm start
+```
+
+The mControl sample server should now be running on port 8098.
+
+
+## License
+
+Copyright (c) 2018, mediola - connected living AG
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
