@@ -1,0 +1,18 @@
+{
+    "name": "mediola-mcontrol-sample-server",
+    "version": "0.0.1",
+    "description": "A simplified sample Node.js mediola mControl server implementation",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "xml2js": "^0.4.1"
+    },
+    "keywords": [
+        "mediola",
+        "mcontrol"
+    ],
+    "readmeFilename": "README.md",
+    "license": "ISC"
+  }
