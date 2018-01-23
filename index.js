@@ -2,7 +2,7 @@ var mcontrol = require('./mControl.js');
 
 //sample devices
 //mediola mControl device names are {group}.{name}
-const devices = {
+var devices = {
     "bedroom.light": 50,    //indicates 50 percent
     "kitchen.light": "on"
 };
@@ -17,8 +17,8 @@ server.on("request", function(req, res) {
         {
             if (req.param[p].name == "command" && req.param[p].value)
             {
-                var vp = req.param[p].value.split(".");
                 //value is {group}.{name}.{function}
+                var vp = req.param[p].value.split(".");
                 if (vp.length == 3)
                 {
                     var device = vp[0]+"."+vp[1];
