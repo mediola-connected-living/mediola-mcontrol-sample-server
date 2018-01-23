@@ -1,5 +1,5 @@
 {
-    "name": "mediola-mcontrol-sample-server",
+    "name": "node-js-mcontrol-sample-server",
     "version": "0.0.1",
     "description": "A simplified sample Node.js mediola mControl server implementation",
     "main": "index.js",
