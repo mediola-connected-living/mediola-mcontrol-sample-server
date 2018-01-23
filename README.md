@@ -8,7 +8,7 @@ A simplified node.js implementation of the mediola mControl server protocol.
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
-git clone git@github.com:mediola-connected-living/node-js-mcontrol-sample-server.git # or clone your own fork
+git clone https://github.com/mediola-connected-living/node-js-mcontrol-sample-server.git
 cd node-js-mcontrol-sample-server
 npm install
 npm start
