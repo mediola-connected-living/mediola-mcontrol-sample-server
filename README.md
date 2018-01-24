@@ -1,6 +1,6 @@
 # mediola mControl node.js sample server
 
-A simplified node.js implementation of the mediola mControl server protocol.
+A simplified node.js implementation of the mediola mControl server protocol intended for demonstration purposes.
 
 
 ## Running Locally
