@@ -1,7 +1,7 @@
 var mcontrol = require('./mControl.js');
 
 //sample devices
-//mediola mControl device names are {group}.{name}
+//mediola mControl device names are {group}.{device}
 var devices = {
     "bedroom.light": 50,    //indicates 50 percent
     "kitchen.light": "on"
@@ -17,7 +17,7 @@ server.on("request", function(req, res) {
         {
             if (req.param[p].name == "command" && req.param[p].value)
             {
-                //value is {group}.{name}.{function}
+                //value is {group}.{device}.{function}
                 var vp = req.param[p].value.split(".");
                 if (vp.length == 3)
                 {
