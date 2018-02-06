@@ -2,6 +2,89 @@
 
 A simplified node.js implementation of the mediola mControl server protocol intended for demonstration purposes.
 
+## Communication protocol
+
+
+
+### Execute a command
+
+The following sample message (sent by the remote) executes a command:
+
+```
+MCM:PLUGIN
+XML
+00000164
+<?xml version="1.0"?>
+<mctrlmessage>
+<request name="ExecuteCommand" module="hcontrol">
+<param name="command" value="kitchen.light.on" />
+</request>
+</mctrlmessage>
+```
+
+The ```param``` element of the XML message contains the relevant information:  
+```name```: always set to "command" to execute a command  
+```value```: command to execute (composed of group, device and command)  
+
+The server responds to such an "ExecuteCommand" request with the following message:
+
+```
+XML
+00000117
+<?xml version="1.0"?>
+<mctrlmessage>
+<response>
+<return name="status" value="success" />
+</response>
+</mctrlmessage>
+```
+
+Because the client (remote) only checks for a valid response and does not check for different statuses,
+the content of the response can always be identical to the shown message.
+
+
+### Get states
+
+The following sample message (sent by the remote) queries for device states:
+
+```
+MCM:PLUGIN
+XML
+00000236
+<?xml version="1.0"?>
+<mctrlmessage>
+<request name="GetStates" module="hcontrol">
+<param name="mcontrol.Küche:state" value="kitchen.light" />
+<param name="mcontrol.Schlafzimmer:state" value="bedroom.light" />
+</request>
+</mctrlmessage>
+```
+
+The ```param``` element of the XML message contains the relevant information:  
+```name```: name of device as set up in the remote  
+```value```: device id (composed of group and device)  
+
+Because the states of a remote page are always requested by one single message, the
+param element may occur several times in one message.
+
+To a request message like above, the server responds as follows:
+
+```
+XML
+00000183
+<?xml version="1.0"?>
+<mctrlmessage>
+<response>
+<return name="mcontrol.Küche:state" value="on" />
+<return name="mcontrol.Schlafzimmer:state" value="50" />
+</response>
+</mctrlmessage>
+```
+
+The ```return``` element of the XML message contains the relevant information:  
+```name```: name of device as set up in the remote  
+```value```: current state of the device  
+
 
 ## Running Locally
 
