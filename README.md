@@ -15,7 +15,7 @@ XML
 XXXXXXXX
 ```
 
-While line 1 and 2 are always identical, the third line defines the length of the message and needs to be set correctly (always 8 characters long, if necessary filled with starting ```0```s) for the message to be valid.  
+While line 1 and 2 are always identical, the third line defines the length of the message and needs to be set correctly (always 8 characters long, if necessary filled with leading ```0```s) for the message to be valid.  
 Every line of the header has to end with a line feed (```\n```).
 
 For responses a 2 line haeder is used:
