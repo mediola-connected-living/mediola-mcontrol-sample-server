@@ -2,8 +2,30 @@
 
 A simplified node.js implementation of the mediola mControl server protocol intended for demonstration purposes.
 
-## Communication protocol
+## mControl communication protocol
 
+A mControl message always consists of a header followed by some XML which carries all the information to
+execute commands and request states. 
+
+For requests a 3 line header is used:
+
+```
+MCM:PLUGIN
+XML
+XXXXXXXX
+```
+
+While line 1 and 2 are always identical, the third line defines the length of the message and needs to be set correctly (always 8 characters long, if necessary filled with starting ```0```s) for the message to be valid.  
+Every line of the header has to end with a line feed (```\n```).
+
+For response a 2 line haeder is used:
+
+```
+XML
+XXXXXXXX
+```
+
+The 2 lines of the response header correspond to the last 2 lines of request header, so the same rules apply here.
 
 
 ### Execute a command
