@@ -108,7 +108,7 @@ The ```return``` element of the XML message contains the relevant information:
 ```value```: current state of the device  
 
 
-## Running Locally
+## Run sample server locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
