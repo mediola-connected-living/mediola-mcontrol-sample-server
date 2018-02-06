@@ -2,7 +2,7 @@
 
 A simplified node.js implementation of the mediola mControl server protocol intended for demonstration purposes.
 
-For more information about the usage and integration of the mControl protocol in AIO CREATOR NEO you can download the following file from the mediola website:
+For more information about the usage and integration of the mControl protocol in AIO CREATOR NEO you can download the following file from the mediola website:  
 http://doku.mediola.com/lib/exe/fetch.php?media=de:creator:how-to-use-mcontrol.pdf
 
 
