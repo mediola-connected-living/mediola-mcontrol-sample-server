@@ -9,7 +9,7 @@ http://doku.mediola.com/lib/exe/fetch.php?media=de:creator:how-to-use-mcontrol.p
 ## mControl communication protocol
 
 A mControl message always consists of a header followed by some XML which carries all the information to
-execute commands and request states. 
+execute commands and obtain states. 
 
 For requests a 3 line header is used:
 
