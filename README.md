@@ -61,7 +61,7 @@ XML
 </mctrlmessage>
 ```
 
-Because the client (remote) only checks for a valid response and does not check for different statuses,
+Because the client (remote) only checks for a valid response and does not check for different return values,
 the content of the response can always be identical to the shown message.
 
 
